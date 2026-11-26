@@ -1,0 +1,15 @@
+# Render deployment blueprint: https://render.com/docs/blueprint-spec
+# Deploys CSharpTutor as one web service that serves both the API and the
+# built frontend.
+services:
+  - type: web
+    name: csharptutor
+    runtime: node
+    plan: free
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      # Entered by hand in the Render dashboard; never stored in this repo.
+      - key: GEMINI_API_KEY
+        sync: false
