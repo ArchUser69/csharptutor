@@ -1,0 +1,6 @@
+{
+  "name": "CSharpTutor",
+  "description": "Interactive AI C# programming tutor with line-by-line code explanations, hints-first debugging, practice exercises, and quizzes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
